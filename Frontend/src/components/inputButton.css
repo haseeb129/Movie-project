@@ -1,0 +1,33 @@
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 30.5%;
+}
+.brown {
+  background: brown;
+}
+.btn {
+  border: 5% solid gray;
+  background-color: white;
+  color: white;
+  padding: 8% 20%;
+  border-radius: 15%;
+  font-size: 30%;
+  font-weight: bold;
+}
+.browse-btn:hover {
+  background: black;
+}
+.font {
+  color: white;
+  font-weight: 700;
+}
+
+.upload-btn-wrapper input[type="file"] {
+  font-size: 120%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
