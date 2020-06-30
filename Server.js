@@ -46,6 +46,8 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
+app.use("/", express.static(path.join(__dirname, "/frontend/build"))); //from net
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/uploads", express.static("uploads"));
