@@ -18,11 +18,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd Frontend && npm run build",
-    "install-frontend": " npm install --prefix frontend",
+    "install-frontend": " npm install --prefix Frontend",
     "start": "node server.js",
     "server": "nodemon server.js",
     "frontend": "npm start --prefix frontend",
-    "dev": "concurrently  \"nodemon Server.js\" \"cd frontend && npm start\"",
+    "dev": "concurrently  \"nodemon Server.js\" \"cd Frontend && npm start\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
