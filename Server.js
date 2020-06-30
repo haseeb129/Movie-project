@@ -11,7 +11,8 @@ const ticket = require("./routes/Ticket");
 const user = require("./routes/User");
 const path = require("path");
 var ip = require("ip");
-const port = process.env.Port || 5000;
+const port = process.env.PORT || 5000;
+const host = "0.0.0.0";
 
 app.use(
   bodyParser.urlencoded({
@@ -27,7 +28,7 @@ mongoose
   .then(() => console.log("Connected to Mongo ...."))
   .catch((error) => console.log(error.message));
 
-var server = app.listen(port, () => {
+var server = app.listen(port, host, () => {
   console.log(
     "Movie System Express server is running on " +
       ip.address() +
