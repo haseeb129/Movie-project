@@ -11,8 +11,6 @@ const ticket = require("./routes/Ticket");
 const user = require("./routes/User");
 const path = require("path");
 var ip = require("ip");
-const port = process.env.PORT || 5000;
-const host = "0.0.0.0";
 
 app.use(
   bodyParser.urlencoded({
@@ -27,6 +25,9 @@ mongoose
   })
   .then(() => console.log("Connected to Mongo ...."))
   .catch((error) => console.log(error.message));
+
+const port = process.env.PORT || 5000;
+const host = "0.0.0.0";
 
 var server = app.listen(port, host, () => {
   console.log(
