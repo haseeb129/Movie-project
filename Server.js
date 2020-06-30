@@ -1,6 +1,7 @@
 const express = require("express");
 var cors = require("cors");
 const app = express();
+const keys = require("./config/keys");
 const router = express.Router();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -19,14 +20,10 @@ app.use(
 );
 
 mongoose
-  .connect(
-    process.env.MONGODB_URL ||
-      "mongodb+srv://Haseeb:0000@movie-yjb6t.mongodb.net/test?retryWrites=true&w=majority",
-    {
-      useMongoClient: true,
-      useNewUrlParser: true,
-    }
-  )
+  .connect(keys.mongoURI, {
+    useMongoClient: true,
+    useNewUrlParser: true,
+  })
   .then(() => console.log("Connected to Mongo ...."))
   .catch((error) => console.log(error.message));
 
