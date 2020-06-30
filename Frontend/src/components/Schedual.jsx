@@ -125,7 +125,8 @@ export default class Schedual extends Component {
         config
       )
       .then((res) => {
-        window.location = "/CompleteSchedule";
+        this.props.history.push("/CompleteSchedule");
+        //window.location = "/CompleteSchedule";
       })
       .catch((err) => {
         alert("Data Missing");
