@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
     LastName: Joi.string().min(3).max(50).required(),
     Email: Joi.string().min(5).max(50).email().required(),
     Phone: Joi.string().min(5).max(25).required(),
-    Password: Joi.string().min(4).max(200).required(),
+    Password: Joi.string().min(4).max(30).required(),
     Picture: Joi.string().min(2).max(255),
   });
 

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "Server.js",
   "dependencies": {
+    "array-flatten": "^3.0.0",
     "axios": "^0.19.2",
     "bcrypt": "^5.0.0",
     "cors": "^2.8.5",
@@ -16,11 +17,12 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd frontend && npm run build",
-    "install-frontend": "cd frontend && npm install",
-    "heroku-postbuild": "npm run install-frontend && npm run build",
+    "build": "cd Frontend && npm run build",
+    "install-frontend": " npm install --prefix frontend",
     "start": "node server.js",
-    "dev": "concurrently  \"nodemon server.js\" \"cd frontend && npm start\""
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently  \"nodemon Server.js\" \"cd frontend && npm start\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
   "author": "",

@@ -25,7 +25,6 @@ router.post(
   ImageServices.upload.single("file"),
   validateUser,
   (req, res, next) => {
-    const address = req.serverAddress;
     User.findOne({ Email: req.body.Email })
       .exec()
       .then((user) => {
@@ -56,15 +55,13 @@ router.post(
                     .json({ result }); //also can sent token in the body
                 })
                 .catch((err) => {
-                  console.log(err);
-                  res.status(500).json({ message: "User Already Exist" });
+                  err.status(500).json({ message: "User Already Exist" });
                 });
             }
           });
         }
       })
       .catch((err) => {
-        console.log(err);
         res.status(500).json({ message: "User Already Exist" });
       });
   }

@@ -30,7 +30,7 @@ const Users = mongoose.Schema({
     type: String,
     required: true,
     minlength: 4,
-    maxlength: 200,
+    maxlength: 30,
   },
 
   Picture: String,

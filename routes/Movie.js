@@ -7,15 +7,8 @@ const isAdmin = require("../middleware/isAdmin");
 const ScheduleServices = require("../ExtraFunctions/ScheduleServices");
 const ImageServices = require("../ExtraFunctions/ImageServices");
 
-router.get("/get", (req, res) => {
-  Movie.find({}, (err, User) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.json(User);
-    }
-  });
-});
+let address = "http://localhost:5000/";
+
 router.post(
   "/post1122",
   ImageServices.upload.single("file"),
@@ -23,7 +16,6 @@ router.post(
   checkAuth,
   isAdmin,
   (req, res, next) => {
-    const address = req.serverAddress;
     const sample = new Movie({
       Name: req.body.Name,
       Director: req.body.Director,
@@ -94,4 +86,14 @@ router.delete("/delete/:id", checkAuth, isAdmin, async (req, res) => {
     });
 });
 
+//perfect
+router.get("/get", (req, res) => {
+  Movie.find({}, (err, User) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.json(User);
+    }
+  });
+});
 module.exports = router;
