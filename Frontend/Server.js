@@ -9,9 +9,9 @@ mongoose
   .then(() => {
     console.log("Db connected");
   })
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));
 
-const port = process.env.PORT;
-app.listen(port, function() {
+const port = process.env.Port;
+app.listen(port, function () {
   console.log(`Listining on port ${port}`);
 });
