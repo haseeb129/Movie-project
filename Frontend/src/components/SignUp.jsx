@@ -106,7 +106,7 @@ export default class Signup extends React.Component {
                 />
                 <div className="upload-btn-wrapper">
                   <label>
-                    <button className="btn browse-btn brown">
+                    <button className="btn browse-btn brown" size="lg" block>
                       Upload Image
                     </button>
                     <input
@@ -114,6 +114,8 @@ export default class Signup extends React.Component {
                       variant="danger"
                       ref="uploadImg"
                       name="selectedFile"
+                      size="lg"
+                      block
                       onChange={this._onChange}
                     />
                   </label>
@@ -169,7 +171,7 @@ export default class Signup extends React.Component {
                   <br />
 
                   {!this.state.loading && (
-                    <Button variant="danger" type="submit">
+                    <Button size="lg" block variant="danger" type="submit">
                       Submit
                     </Button>
                   )}

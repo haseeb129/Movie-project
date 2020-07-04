@@ -111,6 +111,7 @@ export default class Users extends Component {
                           <Button
                             variant="danger"
                             onClick={() => this.handleDelete(data)}
+                            size="lg"
                           >
                             Delete
                           </Button>

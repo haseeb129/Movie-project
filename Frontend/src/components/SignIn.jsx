@@ -91,7 +91,7 @@ class SignIn extends Component {
                   />
                   <br />
                   {!this.state.loading && (
-                    <Button variant="danger" type="submit">
+                    <Button size="lg" block variant="danger" type="submit">
                       Submit
                     </Button>
                   )}

@@ -121,6 +121,7 @@ export default class Tickets extends Component {
                         {auth.getCurrentUser() !== null && (
                           <Button
                             variant="danger"
+                            size="lg"
                             onClick={() => this.handleDelete(data)}
                           >
                             Cancel Booking

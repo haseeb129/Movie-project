@@ -99,11 +99,13 @@ export default class EnterMovie extends React.Component {
 
             <div className="upload-btn-wrapper">
               <label>
-                <button className="btn browse-btn brown ">
+                <button size="lg" block className="btn browse-btn brown ">
                   <span className="font"> Upload Image</span>
                 </button>
                 <input
                   type="file"
+                  size="lg"
+                  block
                   variant="danger"
                   ref="uploadImg"
                   name="selectedFile"
