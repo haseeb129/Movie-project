@@ -11,7 +11,7 @@ export default class SampleNavbar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar variant="tabs" bg="dark" expand="md" default>
+        <Navbar variant="tabs" bg="dark" expand="lg" default>
           <Navbar.Brand href="#home">
             <NavLink
               style={{ color: "white", marginRight: "2rem" }}

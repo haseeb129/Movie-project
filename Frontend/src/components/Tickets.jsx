@@ -92,7 +92,7 @@ export default class Tickets extends Component {
         return (
           <div className="container" style={{ minHeight: "60vh" }}>
             <h1>All Tickets</h1>
-            <Table striped hover variant="dark">
+            <Table striped hover responsive variant="dark">
               <thead>
                 <tr>
                   <th>Name</th>

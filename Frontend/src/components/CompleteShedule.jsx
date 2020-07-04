@@ -77,7 +77,13 @@ export default class CompleteSchedule extends Component {
         return (
           <div className="container" style={{ minHeight: "60vh" }}>
             <h1>Complete Schedule</h1>
-            <Table striped hover variant="dark" className="text-center">
+            <Table
+              striped
+              hover
+              responsive
+              variant="dark"
+              className="text-center"
+            >
               <thead>
                 <tr>
                   <th>Date</th>

@@ -79,7 +79,7 @@ export default class Users extends Component {
           <div className="container" style={{ minHeight: "60vh" }}>
             <h1>All Users</h1>
 
-            <Table striped hover variant="dark" className="container">
+            <Table striped hover responsive variant="dark">
               <thead>
                 <tr>
                   <th>
