@@ -106,9 +106,9 @@ export default class Signup extends React.Component {
                 />
                 <div className="upload-btn-wrapper">
                   <label>
-                    <button className="btn browse-btn brown" size="lg" block>
+                    <Button className="btn browse-btn brown" size="lg" block>
                       Upload Image
-                    </button>
+                    </Button>
                     <input
                       type="file"
                       variant="danger"
