@@ -28,6 +28,7 @@ div.background {
   background-position: center;
   background-size: cover;
   height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
 }
 

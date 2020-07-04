@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import SingleCard from "./SingleCard";
 import axios from "axios";
-import { Row, Col } from "reactstrap";
+import { Row, Col } from "react-bootstrap";
 import auth from "./authService";
 axios.defaults.headers.common["x-auth-token"] = "Token is here";
 
@@ -40,7 +40,7 @@ export default class MovieCard extends React.Component {
         <Row>
           {arrCards.map((data) => {
             return (
-              <Col xs lg="4">
+              <Col sm={4}>
                 <SingleCard
                   _id={data._id}
                   Name={data.Name}

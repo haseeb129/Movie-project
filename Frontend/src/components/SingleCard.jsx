@@ -23,7 +23,10 @@ export default class MovieCard extends React.Component {
   };
   render() {
     return (
-      <Card className="bg-dark text-white m-2" style={{ width: "23rem" }}>
+      <Card
+        className="bg-dark text-white m-2 ml-2 mr-2"
+        style={{ width: "23rem" }}
+      >
         <Card.Img variant="top" src={this.props.Picture} height="300" />
         <Card.Body>
           <Card.Title>{this.props.Name}</Card.Title>
