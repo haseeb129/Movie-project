@@ -20,7 +20,6 @@ export default class MovieCard extends React.Component {
     Platinum: this.props.Platinum,
     Gold: this.props.Gold,
     Silver: this.props.Silver,
-    buttonString: "Show details",
   };
   render() {
     return (
@@ -47,8 +46,8 @@ export default class MovieCard extends React.Component {
                   },
                 }}
               >
-                <Button variant="success" block className="container">
-                  {this.state.buttonString}
+                <Button variant="success" block size="lg" className="container">
+                  Show details
                 </Button>
               </Link>
             </Col>
@@ -70,8 +69,13 @@ export default class MovieCard extends React.Component {
                     },
                   }}
                 >
-                  <Button variant="warning" block className="container">
-                    Update the Details
+                  <Button
+                    variant="warning"
+                    block
+                    size="lg"
+                    className="container"
+                  >
+                    Update Details
                   </Button>
                 </Link>
               </Col>
@@ -84,6 +88,7 @@ export default class MovieCard extends React.Component {
                 <Button
                   variant="danger"
                   block
+                  size="lg"
                   onClick={() => this.props.onDelete(this.props._id)}
                   style={{ padding: "9%" }}
                 >
