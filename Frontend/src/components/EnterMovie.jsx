@@ -96,7 +96,6 @@ export default class EnterMovie extends React.Component {
               allowfullscreen
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             />
-
             <div className="upload-btn-wrapper">
               <label>
                 <Button size="lg" block className="btn browse-btn brown ">

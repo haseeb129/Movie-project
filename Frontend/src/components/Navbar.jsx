@@ -3,7 +3,6 @@ import { Navbar, Nav, Form, NavDropdown, Badge } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import logo1 from "../Pictures/brand.png";
-
 export default class SampleNavbar extends React.Component {
   state = {
     user: this.props.user,
