@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
 import Badge from "react-bootstrap/Badge";
 import auth from "./authService";
+import "bootstrap/dist/css/bootstrap.css";
 import Loader from "react-loader-spinner";
 export default class Users extends Component {
   constructor(props) {
